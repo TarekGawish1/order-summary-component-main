@@ -1,0 +1,139 @@
+:root {
+    --primaryColor: hsl(245, 75%, 52%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blueveryPaleColor: hsl(225, 100%, 98%);
+    --bluePaleColor: hsl(225, 100%, 94%);
+    --blueDesaturated: hsl(224, 23%, 55%);
+    --darkColor: hsl(223, 47%, 23%);
+}
+
+@font-face {
+    font-family: RedHatDisplay;
+    src: url(fonts/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bluePaleColor) url(images/pattern-background-desktop.svg) no-repeat top;
+    background-size: 100% calc(100vh - 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 420px;
+    height: 624px;
+    background-color: var(--whiteColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    line-height: 1.5;
+    font-family: RedHatDisplay;
+    box-shadow:1px 15px 25px rgba(0, 0, 0, 0.07);
+}
+
+.header-image {
+    width: 420px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    margin: 24px 0;
+}
+
+.header h1 {
+    margin-bottom: 12px;
+    color: var(--darkColor);
+    font-weight: 900;
+    font-size: 26px;
+}
+
+.header p {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 20px;
+    text-align: center;
+    color: var(--blueDesaturated);
+}
+
+.plan-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 360px;
+    height: 100px;
+    background-color: var(--blueveryPaleColor);
+    border-radius: 15px;
+    margin-bottom: 24px;
+}
+
+.card-text {
+    font-size: 12px;
+    margin: 0 50px 0 -18px;
+}
+
+.card-text h2 {
+    font-weight: 700;
+    color: var(--darkColor);
+}
+
+.card-text p {
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--blueDesaturated);
+}
+
+.plan-card a {
+    color: var(--primaryColor);
+    font-weight: 700;
+}
+
+.plan-card a:hover {
+    text-decoration: none;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button > input:nth-child(1){
+    text-decoration: none;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    font-weight: 400;
+    font-size: 16px;
+    width: 360px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom:12px ;
+    box-shadow:0px 12px 20px #D6D2F9;
+}
+
+.button > input:nth-child(2){
+    text-decoration: none;
+    border: none;
+    background:none;
+    color: var(--blueDesaturated);
+    font-weight: 400;
+    font-size: 14px;
+    width: fit-content;
+    height: 50px;
+}
+
+input:hover{
+    cursor: pointer;
+}
